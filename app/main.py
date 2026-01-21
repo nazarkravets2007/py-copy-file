@@ -4,6 +4,9 @@ def copy_file(command: str) -> None:
     if len(parts) != 3:
         return
 
+    if parts[0] != "cp":
+        return
+
     _, src, dst = parts
 
     if src == dst:
